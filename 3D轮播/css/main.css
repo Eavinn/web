@@ -1,0 +1,242 @@
+/* 清除标签默认的外边和内边距 */
+body,p,h1,h2,h3,h4,h5,h6,ul{
+    margin:0px;
+    padding:0px;
+}
+
+/* 清除标签默认条目符号 */
+ul{
+    list-style:none;
+}
+
+/* 将h标签的文字大小设置为默认大小 */
+h1,h2,h3,h4,h5,h6{
+    font-size:100%;
+    /* 根据实际需求来加   */
+    font-weight:normal;
+}
+
+/* 去掉a标签默认的下划线 */
+a{
+    text-decoration:none;
+}
+/* 去掉标签默认的文字倾斜 */
+em,i{
+    font-style:normal;
+}
+/* 去掉标签默认的文字加粗(按实际需求) */
+b,strong{
+    font-weight:normal;
+}
+
+
+
+
+/* 设置img的边框为0 */
+img{ 
+    border:0;
+}
+
+/* 设置body的背景图片 */
+body {
+    background-image: url("../images/1.png");
+    background-repeat: no-repeat;
+    /* background-size: 1000px 800px; */
+    /* background-attachment: fixed; */
+    /* background-position: 0px 0px; */
+}
+
+body {
+    width:100%;
+    /* 把背景图像扩展至足够大，以使背景图像完全覆盖背景区域。 */
+    background-size:cover;	
+    height:100%;
+    min-height:1000px;	
+    overflow:hidden;
+    font-family: 'quicksandlight', Helvetica, Arial;
+    color:#fff;
+    /* 
+    文字添加阴影效果
+    -1px: 阴影水平偏移值（可取正负值）；
+    -1px：阴影垂直偏移值（可取正负值）；
+    4px：阴影模糊值；
+    rgba(0,0,0,.35)：阴影颜色；
+     */
+    text-shadow: -1px -1px 4px rgba(0, 0, 0, .35);	
+    /* 
+    创建对象的固定影子
+    Color:#rrggbb格式，任意。
+    Offx：X轴偏离值。
+    Offy：Y轴偏离值。
+    Positive：如果为"True"为任何的非透明像素建立可见的投影.如果为"False",为透明的像素部分建立可见的投影（参考）。
+    */
+    filter: dropshadow(color=#000000, offx=1, offy=1);
+}
+
+header {
+    margin-top:30px;
+    position:absolute;	
+    z-index:5;	
+    width:420px;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+.trans3d {
+    -webkit-transform-style: preserve-3d;	
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform-style: preserve-3d;
+    -moz-transform: translate3d(0, 0, 0);	
+    -ms-transform-style:preserve-3d;
+    -ms-transform: translate3d(0, 0, 0);
+    /* 其两个参数，flat|preserve-3d. 前者flat为默认值，表示平面的；后者preserve-3d表示3D透视 */
+    transform-style:preserve-3d;
+    /* 分别表示x、y、z轴的偏移量 */
+    transform: translate3d(0, 0, 0);
+}
+
+/* 以下两个样式设置轮播图显示的位置 */
+#contentContainer {
+    width:1000px;
+    height:1000px;
+    position:absolute;
+    margin-left:-500px;
+    margin-top:-150px;
+    left:50%;
+    top:50%;	
+}
+
+#carouselContainer {
+    width:1000px;
+    height:1000px;
+    position:absolute;
+    margin-left:-500px;
+    margin-top:-500px;
+    left:50%;
+    top:50%;
+}
+
+/* 设置容纳图片的容器大小和位置 */
+.carouselItem {
+    width:320px;	
+    height:130px;
+    position:absolute;	
+    left:50%;
+    top:50%;
+    margin-left:-160px;
+    margin-top:-90px;
+    visibility:hidden;
+}
+
+/* 设置背景图div的大小，边框，位置等 */
+.carouselItemInner {
+    width:320px;
+    height:130px;
+    position:absolute;	
+    background-color:rgba(255, 255, 255, .75);	
+    border:10px solid rgba(255, 255, 255, .5);
+    color:aqua;
+    font-size:72px;
+    left:50%;
+    top:50%;
+    margin-left:-160px;
+    margin-top:-90px;
+    text-align:center;
+    padding-top:50px;
+    background-size: 340px 200px;
+    cursor:pointer;
+}
+
+.title {
+    text-align:center;
+    margin: 16px 0px auto;
+}
+
+.vintage{
+    /* 字体背景图 */
+    background: #EEE url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAHklEQVQImWNkYGBgYGD4//8/A5wF5SBYyAr+//8PAPOCFO0Q2zq7AAAAAElFTkSuQmCC) repeat;
+    text-shadow: 5px -5px red, 4px -4px gold;
+    font-weight: bold;
+    background-clip: text;
+    /* 适配其他浏览器 */
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-size:35px;
+    font-family:Arial, Helvetica, sans-serif;
+    line-height: 50px;
+    
+    /* text-indent: 10em; */
+}
+
+.big_box {
+    text-align: center;
+    opacity: 0.9;
+    margin: 20px 500px 0px;
+    
+}
+
+
+.pic_detail {
+    display: inline-block;
+    background-color: plum;
+    padding: 1px 1px;
+    border: 5px double pink;
+    /* float: left; */
+    /* overflow: scroll; */
+}
+
+audio {
+    position:absolute;
+    right:20px;
+    top:50px;
+    opacity: 0.2;
+}
+
+
+/* .carouselItemInner a {
+    display: inline-block;
+    width: 340px;
+    height: 200px;
+    margin-left:-10px;
+    margin-top:-60px;
+} */
+
+#accordion{
+    width:350px; 
+    height:164px;;
+    margin:20px;
+    position:absolute;
+    overflow:hidden; 
+    border:1px solid #CCC;
+    border-radius:10px;}
+
+#accordion ul li{
+    width:310px;
+    height:164px;;
+    position:absolute;
+    background:#FFF;}
+
+#accordion ul li span{
+    font-size: 20px;
+    display:block;
+    width:20px; 
+    height:164px;;
+    float:left;
+    text-align:center; 
+    color:#FFF;
+    padding-top:5px; 
+    cursor:pointer;}
+
+#accordion ul li video{
+    display:block; 
+    float:right;
+    height: 164px;
+    width: 290px;
+}
+
+.bar01{left:0px;}
+.bar02{left:310px;}
+.bar03{left:330px;}
+.bar01 span{background:red;}
+.bar02 span{background:#F28B24;}
+.bar03 span{background:#7C0070;}

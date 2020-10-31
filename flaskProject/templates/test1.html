@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% import 'macro.html' as func %}
+    <p>{{ my_dict.dd }}</p>
+    <p>{{ my_list | li_reverse}}</p>
+    <p>{{ my_str }}</p>
+    <p>{{ "my_str" | reverse | upper }}</p>
+    {{ "hello world" | truncate(7, killwords=True, end="", leeway=0)}}
+    <hr>
+    <form>
+        {{ func.input_func('marco_name') }}<br>
+        <label>用户名：</label><input type="text" name="username" value=""><br>
+        <label>密码：</label><input type="password" name="password" value=""><br>
+        <label>重复密码：</label><input type="password" name="password2" value=""><br>
+        <input type="submit" value="注册">
+    </form>
+    {{ config }}<br>
+    {{ request.url }}<br>
+    {{ session }}<br>
+    {%for message in get_flashed_messages()%}
+        {{message}}
+    {%endfor%}
+
+</body>
+</html>

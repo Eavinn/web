@@ -1,0 +1,18 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>POST属性</title>
+</head>
+<body>
+<form method="post" action="/do_post">
+    {% csrf_token %}
+    用户名：<input type="text" name="username"/><br>
+    密码： <input type="password" name="password"/><br>
+    性别： <input type="radio" name="gender" value="0"/>男 <input type="radio" name="gender" value="1"/>女<br>
+    爱好：   <input type="checkbox" name="hobby" value="胸口碎大石"/>胸口碎大石
+            <input type="checkbox" name="hobby" value="脚踩电灯炮"/>脚踩电灯炮
+            <input type="checkbox" name="hobby" value="口吐火"/>口吐火<br>
+            <input type="submit" value="提交"/>
+</form>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>区域显示</title>
+    <script src="{% static 'js/jquery-3.5.1.min.js' %}"></script>
+    <script src="/abc/js/main.js"></script>
+</head>
+
+<body>
+<h3>区域显示</h3>
+
+<select id="province">
+    <option>--请选择省份--</option>
+
+    {% for p in provinces %}
+        <option value="{{ p.id }}">{{ p.title }}</option>
+    {% endfor %}
+</select>
+
+<select id="city">
+    <option>--请选择城市--</option>
+</select>
+
+<select id="district">
+    <option>--请选择区县--</option>
+</select>
+
+</body>
+</html>

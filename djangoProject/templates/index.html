@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+{#ctrl + alt + 空格弹出提示, 加载过滤器#}
+{% load filters %}
+<head>
+    <meta charset="UTF-8">
+    <title>员工简介</title>
+</head>
+<body>
+    <h1>首页</h1>
+
+    用户名: {{ name }} <br/>
+    年龄: {{ age }} <br/>
+    性别: {{ sex }} <br/>
+    工资: {{ salary }} <br/>
+    爱好:
+    <ul>
+        <li>列表长度：{{ hobby|length }}</li>
+       {% for item in hobby %}
+        <li>{{ forloop.counter0 }}--{{ forloop.counter }}--{{ item }}</li>
+       {% endfor %}
+    </ul>
+    <h3>日期：{{ my_date|date:"Y年m月d日  H时i分s秒"}}</h3>
+    <h3>自定义过滤器： {{ age|odd }}</h3>
+    {{ my_html|safe }}
+    {% autoescape off %}
+      {{ my_html}}  {{ my_html}} {{ my_html}} {{ my_html}} <br/>
+    {% endautoescape %}
+
+
+</body>
+</html>

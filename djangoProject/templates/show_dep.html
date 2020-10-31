@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>员工信息</title>
+</head>
+<body>
+<h1>{{ department.name }}</h1>
+ <!-- 使用表格显示该部门所有的员工 -->
+     <table>
+
+         <!--显示表头-->
+         <tr>
+             <td width="100">id</td>
+             <td width="100">姓名</td>
+             <td width="100">性别</td>
+             <td width="100">年龄</td>
+             <td width="100">工资</td>
+             <td width="100">备注</td>
+         </tr>
+
+         <!--for循环显示表的每一行-->
+         {% for emp in employees %}
+             <tr>
+                 <td>{{ emp.id }}</td>
+                 <td>{{ emp.name }}</td>
+                 <td>{{ emp.sex }}</td>
+                 <td>{{ emp.age }}</td>
+                 <td>{{ emp.salary }}</td>
+                 <td>{{ emp.comment }}</td>
+             </tr>
+
+         {% endfor %}
+
+     </table>
+</body>
+</html>

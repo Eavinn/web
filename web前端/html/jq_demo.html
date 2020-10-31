@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jq的使用</title>
+    <link rel="stylesheet" type="text/css" href="../css/jq.css">
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <script src="../js/jquery.color-2.1.2.min.js"></script>
+    <script src="../js/jq.js"></script>
+</head>
+<body>
+    <div class="tap_con">
+        <div class="tap_btns">
+            <input type="button" value="按钮一" class="active">
+            <input type="button" value="按钮二">
+            <input type="button" value="按钮三">
+        </div>
+        <div class="tab_cons">
+            <div class="current">按钮一对应的内容</div>
+            <div>按钮二对应的内容</div>
+            <div>按钮三对应的内容</div>
+        </div>
+    </div>
+    
+    <div class="talk_con">
+        <!--1.对话框-->
+        <div class="talk_show" id="words">
+            <div class="atalk"><span>A说：吃饭了吗？</span></div>
+            <div class="btalk"><span>B说：还没呢，你呢？</span></div>
+        </div>
+
+        <!--2.选择人和 输入内容和发送-->
+        <div class="talk_input">
+            <select class="whotalk" id="who">
+                <option value="0">A说：</option>
+                <option value="1">B说：</option>
+            </select>
+            <input type="text" class="talk_word" id="talkwords">
+            <input type="button" value="发送" class="talk_sub" id="talksub">
+        </div>
+    </div>
+
+    <div>
+        <ul class="li_list">
+            <li>22</li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <!-- <div class="box">div文字</div>
+    <input type="text" name="username" id="one" renminbi='20w'> -->
+</body>
+</html>

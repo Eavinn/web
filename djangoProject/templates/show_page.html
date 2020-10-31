@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>分页显示</title>
+</head>
+<body>
+
+{% for area in page.object_list %}
+    {{ area.title }} <br/>
+{% endfor %}
+<br/>
+
+{% if page.has_previous %}
+    <a href="/show_page/{{ page.previous_page_number }}">上一页</a>
+{% endif %}
+
+{% for index in page.paginator.page_range %}
+    {% if index == page.number %}
+        {{ index }}
+    {% else %}
+        <a href="/show_page/{{ index }}">{{ index }}</a>
+    {% endif %}
+{% endfor %}
+
+{% if page.has_next %}
+    <a href="/show_page/{{ page.next_page_number }}">下一页</a>
+{% endif %}
+
+</body>
+</html>

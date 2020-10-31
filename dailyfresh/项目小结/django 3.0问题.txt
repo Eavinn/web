@@ -1,0 +1,15 @@
+django设计模式：
+M:model,模型，负责数据处理-M(Model)
+V:view,视图，处理请求响应请求-C(Controller)
+T:Template,模板，显示数据-V(view)
+
+
+django 3.0相比于前期版本变化
+
+1. url配置优先使用path和re_path方法，url方法需要单独导入，其中path只需要传递路径即可，无需正则表达式
+
+2. 项目url配置namespace的同时需要配置app_name
+
+3. html使用反向解析时，导入方式改为{% load static %}
+
+4. MEDIA_URL配置不能在STATIC_URL目录下

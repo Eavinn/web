@@ -1,0 +1,117 @@
+#one {
+    color:red;
+    background-color: green;
+    width: 60px;
+}
+
+.tap_con {
+    width: 500px;
+    height: 350px;
+    margin-top: 20px;
+    float: left;
+}
+
+.tap_btns {
+    height: 50px;
+}
+
+.tap_btns input {
+    width: 100px;
+    height: 50px;
+    background-color: lightgray;
+    border: 0px;
+    outline: none;
+}
+
+.tap_btns .active{
+    background-color: gold;
+}
+
+.tab_cons{
+               
+    height: 300px;
+    background-color: gold;
+}
+
+.tab_cons div{
+    height: 300px;
+    line-height: 300px;
+    text-align: center;
+    font-size: 30px;
+    display: none;
+}
+
+.tab_cons .current{
+   
+    display: block;
+}
+
+.talk_con{
+    width:600px;
+    height:500px;
+    border:1px solid #666;
+    margin-left: 50px;
+    background:#f9f9f9;
+    float: left;
+}
+.talk_show{
+    width:580px;
+    height:420px;
+    border:1px solid #666;
+    background:#fff;
+    margin:10px auto 0;
+    overflow:auto;
+}
+.talk_input{
+    width:580px;
+    margin:10px auto 0;
+}
+.whotalk{
+    width:80px;
+    height:30px;
+    float:left;
+}
+.talk_word{
+    width:420px;
+    height: 26px;
+    padding: 0px;
+    float: left;
+    margin-left: 10px;
+    outline: none;
+    text-indent: 10px;
+}
+.talk_sub{
+    width:56px;
+    height:30px;
+    float:left;
+    margin-left:10px;
+}
+.atalk{
+    margin:10px; 
+}
+.atalk span{
+    display:inline-block;
+    background:#0181cc;
+    border-radius:10px;
+    color:#fff;
+    padding:5px 10px;
+}
+.btalk{
+    margin:10px;
+    text-align:right;
+}
+.btalk span{
+    display:inline-block;
+    background:#ef8201;
+    border-radius:10px;
+    color:#fff;
+    padding:5px 10px;
+}
+
+.li_list {
+    float: left;
+}
+
+
+
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+            父模板
+        {% endblock title %}
+    </title>
+</head>
+<body>
+
+{% block header %}
+    <h3>父模板的头部</h3>
+{% endblock header %}
+
+<br/>
+<br/>
+<br/>
+
+{% block footer %}
+    <h3>父模板的尾部</h3>
+{% endblock footer %}
+
+</body>
+</html>

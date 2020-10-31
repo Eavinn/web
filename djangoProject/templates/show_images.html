@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>显示图片</title>
+</head>
+<body>
+
+<h3>显示所有用户头像</h3>
+{% for user in users %}
+    <h1>{{ user.name }}</h1>
+    <img src="/abc/media{{ user.avatar }}" /> <br/>
+
+{% endfor %}
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+商品sku和spu的区别：
+spu记录关键属性，sku记录销售属性。spu更像是sku的父类，spu阐述的是商品的和库存、价格无关的属性
+
+创建模型类：
+1.所有模型都有创建时间和更新时间，为了提高复用率，在项目单独创建util-models.py文件抽离出模型基类BaseModel，并给BaseModel添加内部类Meta指定abstract = True
+2.django有单独的AbstractUser类进行用户管理，创建user模型时继承它可减少很多功能开发,如密码自动加密、
+3.model中的Meta内部类可定义很多模型属性，比如admin管理界面的众多显示，当然admin界面显示必须要在admin.py进行注册
+4.使用类视图分开控制一个url的get和post请求
+5.用户登录鉴定抽离代码最优方案就是，编写新类复写as_view, login_required复写as_view函数，装饰函数返回值。功能函数多继承新类和view.
+6.transaction装饰可以实现事务
+
+
+
+三方控件：
+1. tinymce富文本编辑器，优化admin界面描述修改。将模型类中的TextField改为HTMLField，并在setting和项目url中进行相关配置
+2. django有自带接口send_mail,若是要实现异步需要加装celery，修改项目代码后在服务端运行celery服务，客户端发送邮件时定义redis作为celery的中间人broker，并给发送邮件程序套上装饰器。
+这样邮件内容就由celery客户端传递给redis，redis再将任务传递celery服务端任务处理者
+3. itsdangerous模块可以加密重要文字，比如邮件用户id。加解密方法分别为dumps()和loads()
+4. redis存储用户浏览记录和用户购物车数据
+5. FastDFS存储用户处理用户上传图片数据，需要复写FileSystemStorage方法，nginx实现图片读取
+6. haystack全文检索框架，whoosh引擎，jieba中文分词工具，实现搜索功能。需要修改配置，且定义模型索引，
+
+
+
+
+
+
